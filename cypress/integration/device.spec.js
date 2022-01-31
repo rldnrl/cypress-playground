@@ -4,6 +4,7 @@ describe('Device Test', () => {
   afterEach(() => {
     cy.wait(3000)
   })
+
   it('should 720px', () => {
     cy.viewport(1280, 720);
     cy.visit("https://example.cypress.io/")
