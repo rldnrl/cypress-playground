@@ -1,9 +1,15 @@
 /// <reference types="cypress" />
 
 describe('Working with inputs', () => {
+  it('should override the current time', () => {
+    const date = new Date(2021, 1, 31).getTime();
+    cy.clock(date)
+    cy.log(date)
+  });
+
   it('should clear cookie', () => {
     cy.clearCookies({ log: true })
-    cy.clearLocalStorage("your item", { log: true }) 
+    cy.clearLocalStorage("your item", { log: true })
   });
 
   it('should fill username', () => {
